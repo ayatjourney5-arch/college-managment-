@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusHub | College Management</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">C</div>
+            <div>
+                <h2>Campus<span>Hub</span></h2>
+                <small>College Management</small>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <p class="menu-title">MAIN MENU</p>
+
+            <a href="#dashboard" class="nav-link active">
+                <span>⌂</span> Dashboard
+            </a>
+
+            <a href="#departments" class="nav-link">
+                <span>▦</span> Departments
+            </a>
+
+            <a href="#courses" class="nav-link">
+                <span>▤</span> Courses
+            </a>
+
+            <a href="#faculty" class="nav-link">
+                <span>♙</span> Faculty
+            </a>
+
+            <a href="#students" class="nav-link">
+                <span>♙</span> Students
+            </a>
+
+            <p class="menu-title">CAMPUS</p>
+
+            <a href="#events" class="nav-link">
+                <span>◷</span> Events
+            </a>
+
+            <a href="#announcements" class="nav-link">
+                <span>▱</span> Announcements
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="help-box">
+                <div class="help-icon">?</div>
+                <strong>Need Help?</strong>
+                <p>Contact the campus support team.</p>
+                <button>Contact Support</button>
+            </div>
+
+            <div class="profile-mini">
+                <div class="avatar">HZ</div>
+                <div>
+                    <strong>Student Portal</strong>
+                    <small>Campus Member</small>
+                </div>
+                <span>⋮</span>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <div class="page-title">
+                <p>College Management</p>
+                <h1>Good Evening, Student 👋</h1>
+            </div>
+
+            <div class="header-actions">
+
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input type="text" id="searchInput" placeholder="Search campus...">
+                </div>
+
+                <button class="icon-btn" id="notificationBtn">
+                    ♢
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="header-avatar">HZ</div>
+            </div>
+
+        </header>
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="section">
+
+            <div class="welcome-banner">
+
+                <div>
+                    <span class="eyebrow">WELCOME TO CAMPUSHUB</span>
+                    <h2>Manage your college life<br>from one place.</h2>
+                    <p>Explore courses, connect with faculty, discover events and stay updated.</p>
+
+                    <button class="primary-btn" onclick="scrollToSection('departments')">
+                        Explore Campus →
+                    </button>
+                </div>
+
+                <div class="banner-shape">
+                    <div class="shape-circle circle-one"></div>
+                    <div class="shape-circle circle-two"></div>
+                    <div class="building">
+                        <div class="building-roof"></div>
+                        <div class="building-body">
+                            <i></i><i></i><i></i>
+                            <i></i><i></i><i></i>
+                            <i></i><i></i><i></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon students-icon">♙</div>
+                    <div>
+                        <span>Total Students</span>
+                        <h3 class="counter" data-target="2840">0</h3>
+                        <small class="positive">↑ 8.4% <em>this year</em></small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon faculty-icon">♧</div>
+                    <div>
+                        <span>Faculty Members</span>
+                        <h3 class="counter" data-target="186">0</h3>
+                        <small class="positive">↑ 5.2% <em>this year</em></small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon course-icon">▤</div>
+                    <div>
+                        <span>Active Courses</span>
+                        <h3 class="counter" data-target="74">0</h3>
+                        <small class="neutral">Across 8 departments</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon event-icon">◷</div>
+                    <div>
+                        <span>Upcoming Events</span>
+                        <h3 class="counter" data-target="12">0</h3>
+                        <small class="neutral">This semester</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">QUICK ACCESS</span>
+                    <h2>Explore Campus</h2>
+                </div>
+            </div>
+
+            <div class="quick-grid">
+
+                <div class="quick-card" onclick="scrollToSection('departments')">
+                    <div class="quick-icon">▦</div>
+                    <h3>Departments</h3>
+                    <p>Explore academic departments</p>
+                    <span>→</span>
+                </div>
+
+                <div class="quick-card" onclick="scrollToSection('courses')">
+                    <div class="quick-icon">▤</div>
+                    <h3>Courses</h3>
+                    <p>Browse available programs</p>
+                    <span>→</span>
+                </div>
+
+                <div class="quick-card" onclick="scrollToSection('faculty')">
+                    <div class="quick-icon">♙</div>
+                    <h3>Faculty</h3>
+                    <p>Meet our academic team</p>
+                    <span>→</span>
+                </div>
+
+                <div class="quick-card" onclick="scrollToSection('events')">
+                    <div class="quick-icon">◷</div>
+                    <h3>Events</h3>
+                    <p>See what's happening</p>
+                    <span>→</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Departments -->
+        <section id="departments" class="section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">ACADEMICS</span>
+                    <h2>Departments</h2>
+                    <p>Discover our academic departments and their programs.</p>
+                </div>
+                <button class="outline-btn">View All →</button>
+            </div>
+
+            <div class="department-grid">
+
+                <div class="department-card">
+                    <div class="department-top">
+                        <div class="department-icon">⌘</div>
+                        <span class="dept-code">CS</span>
+                    </div>
+                    <h3>Computer Science</h3>
+                    <p>Technology, programming, artificial intelligence and computing.</p>
+                    <div class="dept-footer">
+                        <span>12 Courses</span>
+                        <span>→</span>
+                    </div>
+                </div>
+
+                <div class="department-card">
+                    <div class="department-top">
+                        <div class="department-icon">⚗</div>
+                        <span class="dept-code">SCI</span>
+                    </div>
+                    <h3>Natural Sciences</h3>
+                    <p>Explore biology, chemistry, physics and scientific research.</p>
+                    <div class="dept-footer">
+                        <span>16 Courses</span>
+                        <span>→</span>
+                    </div>
+                </div>
+
+                <div class="department-card">
+                    <div class="department-top">
+                        <div class="department-icon">◈</div>
+                        <span class="dept-code">BUS</span>
+                    </div>
+                    <h3>Business & Management</h3>
+                    <p>Build skills in business, finance, marketing and leadership.</p>
+                    <div class="dept-footer">
+                        <span>14 Courses</span>
+                        <span>→</span>
+                    </div>
+                </div>
+
+                <div class="department-card">
+                    <div class="department-top">
+                        <div class="department-icon">✎</div>
+                        <span class="dept-code">ART</span>
+                    </div>
+                    <h3>Arts & Humanities</h3>
+                    <p>Study literature, communication, history and creative arts.</p>
+                    <div class="dept-footer">
+                        <span>18 Courses</span>
+                        <span>→</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Courses -->
+        <section id="courses" class="section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">PROGRAMS</span>
+                    <h2>Popular Courses</h2>
+                </div>
+                <button class="outline-btn">View Courses →</button>
+            </div>
+
+            <div class="course-table-wrapper">
+
+                <table class="course-table">
+
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Department</th>
+                            <th>Duration</th>
+                            <th>Students</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <div class="course-name">
+                                    <div class="course-symbol">CS</div>
+                                    <strong>BS Computer Science</strong>
+                                </div>
+                            </td>
+                            <td>Computer Science</td>
+                            <td>4 Years</td>
+                            <td>320</td>
+                            <td><span class="status active-status">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="course-name">
+                                    <div class="course-symbol">AI</div>
+                                    <strong>BS Artificial Intelligence</strong>
+                                </div>
+                            </td>
+                            <td>Computer Science</td>
+                            <td>4 Years</td>
+                            <td>215</td>
+                            <td><span class="status active-status">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="course-name">
+                                    <div class="course-symbol">BM</div>
+                                    <strong>BBA Management</strong>
+                                </div>
+                            </td>
+                            <td>Business</td>
+                            <td>4 Years</td>
+                            <td>284</td>
+                            <td><span class="status active-status">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="course-name">
+                                    <div class="course-symbol">BIO</div>
+                                    <strong>BS Biotechnology</strong>
+                                </div>
+                            </td>
+                            <td>Natural Sciences</td>
+                            <td>4 Years</td>
+                            <td>178</td>
+                            <td><span class="status active-status">Active</span></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Faculty -->
+        <section id="faculty" class="section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">OUR PEOPLE</span>
+                    <h2>Featured Faculty</h2>
+                </div>
+                <button class="outline-btn">Meet Faculty →</button>
+            </div>
+
+            <div class="faculty-grid">
+
+                <div class="faculty-card">
+                    <div class="faculty-avatar avatar-a">SA</div>
+                    <h3>Dr. Sarah Ahmed</h3>
+                    <p>Head of Computer Science</p>
+                    <span>AI & Machine Learning</span>
+                </div>
+
+                <div class="faculty-card">
+                    <div class="faculty-avatar avatar-b">MK</div>
+                    <h3>Dr. Michael Khan</h3>
+                    <p>Professor of Business</p>
+                    <span>Business Strategy</span>
+                </div>
+
+                <div class="faculty-card">
+                    <div class="faculty-avatar avatar-c">FA</div>
+                    <h3>Dr. Fatima Ali</h3>
+                    <p>Professor of Biology</p>
+                    <span>Biotechnology</span>
+                </div>
+
+                <div class="faculty-card">
+                    <div class="faculty-avatar avatar-d">OA</div>
+                    <h3>Dr. Omar Aslam</h3>
+                    <p>Physics Department</p>
+                    <span>Applied Physics</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Students -->
+        <section id="students" class="section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">STUDENT COMMUNITY</span>
+                    <h2>Student Overview</h2>
+                </div>
+            </div>
+
+            <div class="student-overview">
+
+                <div class="student-stat-large">
+                    <span>Total Enrollment</span>
+                    <strong>2,840</strong>
+                    <p>Students currently enrolled</p>
+
+                    <div class="progress">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                    <small>78% capacity reached</small>
+                </div>
+
+                <div class="student-breakdown">
+
+                    <div>
+                        <span class="dot dot-one"></span>
+                        <p>Computer Science</p>
+                        <strong>840</strong>
+                    </div>
+
+                    <div>
+                        <span class="dot dot-two"></span>
+                        <p>Business</p>
+                        <strong>620</strong>
+                    </div>
+
+                    <div>
+                        <span class="dot dot-three"></span>
+                        <p>Sciences</p>
+                        <strong>710</strong>
+                    </div>
+
+                    <div>
+                        <span class="dot dot-four"></span>
+                        <p>Arts & Humanities</p>
+                        <strong>670</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Events -->
+        <section id="events" class="section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">CAMPUS LIFE</span>
+                    <h2>Upcoming Events</h2>
+                </div>
+                <button class="outline-btn">All Events →</button>
+            </div>
+
+            <div class="events-grid">
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <strong>26</strong>
+                        <span>SEP</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="event-type">ACADEMIC</span>
+                        <h3>Research & Innovation Summit</h3>
+                        <p>Auditorium Hall · 10:00 AM</p>
+                    </div>
+                    <button class="event-arrow">→</button>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <strong>30</strong>
+                        <span>SEP</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="event-type">STUDENT LIFE</span>
+                        <h3>Campus Cultural Festival</h3>
+                        <p>Central Lawn · 03:00 PM</p>
+                    </div>
+                    <button class="event-arrow">→</button>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <strong>04</strong>
+                        <span>OCT</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="event-type">WORKSHOP</span>
+                        <h3>Future of Artificial Intelligence</h3>
+                        <p>Innovation Lab · 11:30 AM</p>
+                    </div>
+                    <button class="event-arrow">→</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Announcements -->
+        <section id="announcements" class="section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">CAMPUS NEWS</span>
+                    <h2>Latest Announcements</h2>
+                </div>
+            </div>
+
+            <div class="announcement-list">
+
+                <div class="announcement">
+                    <div class="announcement-icon">!</div>
+                    <div>
+                        <span>IMPORTANT · 23 SEP 2026</span>
+                        <h3>Fall semester registration is now open</h3>
+                        <p>Students can complete their course registration through the student portal.</p>
+                    </div>
+                    <button>Read →</button>
+                </div>
+
+                <div class="announcement">
+                    <div class="announcement-icon">◆</div>
+                    <div>
+                        <span>EVENT · 22 SEP 2026</span>
+                        <h3>Applications open for student societies</h3>
+                        <p>Join one of our academic, creative or community-focused student societies.</p>
+                    </div>
+                    <button>Read →</button>
+                </div>
+
+                <div class="announcement">
+                    <div class="announcement-icon">✓</div>
+                    <div>
+                        <span>NOTICE · 20 SEP 2026</span>
+                        <h3>Library timings extended during examinations</h3>
+                        <p>The central library will remain open until 10:00 PM.</p>
+                    </div>
+                    <button>Read →</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div>
+                <strong>Campus<span>Hub</span></strong>
+                <p>Connecting students, faculty and campus life.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#departments">Departments</a>
+                <a href="#courses">Courses</a>
+                <a href="#events">Events</a>
+            </div>
+
+            <p class="copyright">© 2026 CampusHub College. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button id="closeNotifications">×</button>
+        </div>
+
+        <div class="notification-item">
+            <span>!</span>
+            <div>
+                <strong>Registration Open</strong>
+                <p>Fall semester registration is now available.</p>
+            </div>
+        </div>
+
+        <div class="notification-item">
+            <span>✓</span>
+            <div>
+                <strong>Event Reminder</strong>
+                <p>Research Summit is happening on September 26.</p>
+            </div>
+        </div>
+
+        <div class="notification-item">
+            <span>◆</span>
+            <div>
+                <strong>New Announcement</strong>
+                <p>Student society applications are open.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
